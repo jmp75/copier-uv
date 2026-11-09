@@ -6,6 +6,140 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
+## [1.15.7](https://github.com/pawamoy/copier-uv/releases/tag/1.15.7) - 2026-10-20
+
+<small>[Compare with 1.15.6](https://github.com/pawamoy/copier-uv/compare/1.15.6...1.15.7)</small>
+
+### Bug Fixes
+
+- Type with `Generator` instead of `Iterator` ([52a02ea](https://github.com/pawamoy/copier-uv/commit/52a02eac8c4976c1a18005e5813af5a06530a354) by Timothée Mazzucotelli).
+
+## [1.15.6](https://github.com/pawamoy/copier-uv/releases/tag/1.15.6) - 2026-10-20
+
+<small>[Compare with 1.15.5](https://github.com/pawamoy/copier-uv/compare/1.15.5...1.15.6)</small>
+
+### Code Refactoring
+
+- Ignore Ruff's COM812 trailing comma ([6b7e487](https://github.com/pawamoy/copier-uv/commit/6b7e487480582a5a2375a7359708a4bec989fd6b) by Timothée Mazzucotelli).
+
+## [1.15.5](https://github.com/pawamoy/copier-uv/releases/tag/1.15.5) - 2026-10-02
+
+<small>[Compare with 1.15.4](https://github.com/pawamoy/copier-uv/compare/1.15.4...1.15.5)</small>
+
+### Code Refactoring
+
+- Don't warn about encoding in security workflow ([7196e0e](https://github.com/pawamoy/copier-uv/commit/7196e0ea027d0f4d400ffe17da8992202e82e2fa) by Timothée Mazzucotelli).
+- Add Python 3.15 trove classifier ([3e90ee1](https://github.com/pawamoy/copier-uv/commit/3e90ee175720c653cd8c24171d00ec1afe97ba81) by Timothée Mazzucotelli).
+
+## [1.15.4](https://github.com/pawamoy/copier-uv/releases/tag/1.15.4) - 2026-10-01
+
+<small>[Compare with 1.15.3](https://github.com/pawamoy/copier-uv/compare/1.15.3...1.15.4)</small>
+
+### Code Refactoring
+
+- Drop support for Python 3.10 ([b4e9e2c](https://github.com/pawamoy/copier-uv/commit/b4e9e2c80dd131631ac3a529d174f829cfd112ea) by Timothée Mazzucotelli).
+
+## [1.15.3](https://github.com/pawamoy/copier-uv/releases/tag/1.15.3) - 2026-09-27
+
+<small>[Compare with 1.15.2](https://github.com/pawamoy/copier-uv/compare/1.15.2...1.15.3)</small>
+
+### Bug Fixes
+
+- Fix release duty again ([8b56d87](https://github.com/pawamoy/copier-uv/commit/8b56d874cc2601d310fa68455ab60d9574c4c932) by Timothée Mazzucotelli).
+
+### Code Refactoring
+
+- Run security checks as part of make check ([e65ec7d](https://github.com/pawamoy/copier-uv/commit/e65ec7da919c84b5290e6cc0877d32fe80944268) by Timothée Mazzucotelli).
+
+## [1.15.2](https://github.com/pawamoy/copier-uv/releases/tag/1.15.2) - 2026-09-26
+
+<small>[Compare with 1.15.1](https://github.com/pawamoy/copier-uv/compare/1.15.1...1.15.2)</small>
+
+### Code Refactoring
+
+- Make git-changelog silent when releasing ([2204125](https://github.com/pawamoy/copier-uv/commit/22041258aabd69a3f306e2c5ed86071056c144ad) by Timothée Mazzucotelli).
+
+## [1.15.1](https://github.com/pawamoy/copier-uv/releases/tag/1.15.1) - 2026-09-26
+
+<small>[Compare with 1.15.0](https://github.com/pawamoy/copier-uv/compare/1.15.0...1.15.1)</small>
+
+### Bug Fixes
+
+- Add ty-ignore comment in gen-credits script ([da278b4](https://github.com/pawamoy/copier-uv/commit/da278b43cf451fea89cb25ae1fa17429ce38048b) by Timothée Mazzucotelli).
+- Fix syntax in duties ([a12289b](https://github.com/pawamoy/copier-uv/commit/a12289b06c2aa23c9b9f6957932b70c9c5849c0f) by Timothée Mazzucotelli).
+
+## [1.15.0](https://github.com/pawamoy/copier-uv/releases/tag/1.15.0) - 2026-09-26
+
+<small>[Compare with 1.14.0](https://github.com/pawamoy/copier-uv/compare/1.14.0...1.15.0)</small>
+
+### Features
+
+- Automatically get release version from changelog when publishing ([055c514](https://github.com/pawamoy/copier-uv/commit/055c51452bc078901ed42f761682fa9e57cdf765) by Timothée Mazzucotelli).
+
+## [1.14.0](https://github.com/pawamoy/copier-uv/releases/tag/1.14.0) - 2026-09-12
+
+<small>[Compare with 1.13.2](https://github.com/pawamoy/copier-uv/compare/1.13.2...1.14.0)</small>
+
+### Features
+
+- Get PyPI password/token from configured shell command ([315c4ff](https://github.com/pawamoy/copier-uv/commit/315c4ff145263422810049e85ce434d6b38dab9d) by Timothée Mazzucotelli).
+
+## [1.13.2](https://github.com/pawamoy/copier-uv/releases/tag/1.13.2) - 2026-09-10
+
+<small>[Compare with 1.13.1](https://github.com/pawamoy/copier-uv/compare/1.13.1...1.13.2)</small>
+
+### Code Refactoring
+
+- Enable 'perf' commits in changelog ([1e4239e](https://github.com/pawamoy/copier-uv/commit/1e4239ed1117eb639db646dc0d022aa3a2964de6) by Timothée Mazzucotelli).
+
+## [1.13.1](https://github.com/pawamoy/copier-uv/releases/tag/1.13.1) - 2026-08-29
+
+<small>[Compare with 1.13.0](https://github.com/pawamoy/copier-uv/compare/1.13.0...1.13.1)</small>
+
+### Bug Fixes
+
+- Re-allow sponsors workflow to create PR ([3b5b5ce](https://github.com/pawamoy/copier-uv/commit/3b5b5ce2bcfe821da3c4670766da835e6e5c531e) by Timothée Mazzucotelli).
+
+## [1.13.0](https://github.com/pawamoy/copier-uv/releases/tag/1.13.0) - 2026-08-20
+
+<small>[Compare with 1.12.1](https://github.com/pawamoy/copier-uv/compare/1.12.1...1.13.0)</small>
+
+### Features
+
+- Add security workflow ([eb1261a](https://github.com/pawamoy/copier-uv/commit/eb1261ad729729a7d00a944e44c5e02ca6759adc) by Timothée Mazzucotelli).
+- Add security check (uv audit and zizmor) ([3707355](https://github.com/pawamoy/copier-uv/commit/3707355b372853e7135545892f68d3e5330f58ec) by Timothée Mazzucotelli).
+- Add `make zed` command to configure Zed ([3901759](https://github.com/pawamoy/copier-uv/commit/3901759632ca63e9d78a1a57968d5b87a4cce37a) by Timothée Mazzucotelli).
+
+### Code Refactoring
+
+- Python 3.15 is not a dev version anymore ([e42edb9](https://github.com/pawamoy/copier-uv/commit/e42edb9b97d2933fae3483cfe1f8c8166ee9a13b) by Timothée Mazzucotelli).
+- Add license headers to Python files ([ce5c9f0](https://github.com/pawamoy/copier-uv/commit/ce5c9f031ad86276bd9e51f142fbf56a12ae13c3) by Timothée Mazzucotelli).
+
+## [1.12.1](https://github.com/pawamoy/copier-uv/releases/tag/1.12.1) - 2026-06-06
+
+<small>[Compare with 1.12.0](https://github.com/pawamoy/copier-uv/compare/1.12.0...1.12.1)</small>
+
+### Bug Fixes
+
+- use main branch for edit/view URIs ([0fbb125](https://github.com/pawamoy/copier-uv/commit/0fbb1250c34b48bac36a5ab29573bccd3056143d) by Timothée Mazzucotelli).
+
+
+## [1.12.0](https://github.com/pawamoy/copier-uv/releases/tag/1.12.0) - 2026-06-05
+
+<small>[Compare with 1.11.15](https://github.com/pawamoy/copier-uv/compare/1.11.15...1.12.0)</small>
+
+### Features
+
+- Add AI policy ([17cd5c2](https://github.com/pawamoy/copier-uv/commit/17cd5c2914986d09042ef140b6a8d803794ac296) by Timothée Mazzucotelli).
+
+### Bug Fixes
+
+- Fix CLI entrypoint (`pkg:main` instead of `pkg.cli:main`) ([be5d3a8](https://github.com/pawamoy/copier-uv/commit/be5d3a8edd51268694e35dd0ac0bb993ae404ac2) by J-M). [Issue-84](https://github.com/pawamoy/copier-uv/issues/84), [PR-85](https://github.com/pawamoy/copier-uv/pull/85)
+
+### Code Refactoring
+
+- Update contributing guidelines ([0905a41](https://github.com/pawamoy/copier-uv/commit/0905a41f46ddb69ad520d71bac710a326eef7075) by Timothée Mazzucotelli).
+
 ## [1.11.15](https://github.com/pawamoy/copier-uv/releases/tag/1.11.15) - 2026-03-05
 
 <small>[Compare with 1.11.14](https://github.com/pawamoy/copier-uv/compare/1.11.14...1.11.15)</small>

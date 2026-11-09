@@ -3,6 +3,9 @@
 changelog:
 	@.venv/bin/git-changelog -Tio CHANGELOG.md -Bauto -c angular -n pep440
 
+check-security:
+	@uvx zizmor .
+
 clean:
 	@rm -rf tests/tmp
 
@@ -27,10 +30,11 @@ reset-history: gen
 	@bash tests/reset_history.sh
 
 release:
-	@test -n "$(version)" || { echo "error: usage: make release version=x.y.z" >&2; exit 1; }
 	@git add CHANGELOG.md
-	@git commit -m "docs: Update changelog for version $(version)"
-	@git tag -m "" -a $(version)
+	@version="$(version)"; \
+	    version="$${version:-$$(uv run git-changelog --latest-version)}"; \
+		git commit -m "docs: Update changelog for version $$version"; \
+		git tag -m "" -a $$version
 	@git push
 	@git push --tags
 
@@ -52,6 +56,7 @@ DUTIES = \
 	test-check-api \
 	test-check-docs \
 	test-check-quality \
+	test-check-security \
 	test-check-types \
 	test-clean \
 	test-coverage \

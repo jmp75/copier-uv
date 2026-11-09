@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-PYTHON_VERSIONS="${PYTHON_VERSIONS-3.10 3.11 3.12 3.13 3.14 3.15}"
+PYTHON_VERSIONS="${PYTHON_VERSIONS-3.11 3.12 3.13 3.14 3.15}"
 
 . tests/helpers.sh
 output=tests/tmp
@@ -75,7 +75,19 @@ if [ -n "${diff}" ]; then
 fi
 echo
 echo ">>> Running quality checks"
-make check
+make check-quality
+echo
+echo ">>> Running typing checks"
+make check-types
+echo
+echo ">>> Running docs checks"
+make check-docs
+echo
+echo ">>> Running security checks"
+make check-security
+echo
+echo ">>> Running API checks"
+make check-api
 echo
 echo ">>> Running tests"
 make test

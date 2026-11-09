@@ -57,7 +57,7 @@ See [Tasks](#tasks) to learn more.
 To specify which Python versions you would like to work with, define the `PYTHON_VERSIONS` environment variable:
 
 ```bash
-export PYTHON_VERSIONS="3.10 3.11 3.12"
+export PYTHON_VERSIONS="3.12 3.13 3.14"
 ```
 
 By default it is set to active versions of Python (non-EOL, in development).
@@ -133,6 +133,7 @@ Available tasks:
 - `test`: Run the test suite. See [the Tests section](#tests). Arguments:
     - `match=""`: A pytest expression to filter selected tests.
 - `vscode`: Configure VSCode for the project. See [VSCode setup](#vscode-setup).
+- `zed`: Configure Zed for the project. See [Zed setup](#zed-setup).
 
 The `make` script provides some additional commands:
 
@@ -150,6 +151,14 @@ If you work in VSCode, we provide a `make vscode` action that configures setting
 - `.vscode/launch.json`
 - `.vscode/settings.json`
 - `.vscode/tasks.json`
+
+### Zed setup
+
+If you work in Zed, we provide a `make zed` action that configures settings and tasks. **It will overwrite the following existing files, so make sure to back them up:**
+
+- `.zed/debug.json`
+- `.zed/settings.json`
+- `.zed/tasks.json`
 
 ## Workflow
 
@@ -437,6 +446,20 @@ The `release` action does several things, in this order:
 - Build the package dist and wheel
 - Publish the dist and wheel to PyPI.org
 - Build and deploy the documentation site
+
+To retrieve your PyPI password or API token automatically, set `PUBLISH_PASS_CMD` in your project's git-ignored `.env` file:
+
+```sh title=".env"
+PUBLISH_PASS_CMD='pass show pypi/{project} | head -n 1'
+```
+
+Replace the example with a shell command that prints your password or token to standard output. The project's `.envrc` loads `.env` when using [direnv](https://direnv.net/man/direnv-stdlib.1.html). Otherwise, export `PUBLISH_PASS_CMD` in your shell before releasing.
+
+The command is formatted with `{project}` (the PyPI package name) before execution. You can use this placeholder in a password prompt, such as `"Publish {project}"`. Double any literal braces in the command (`{{` and `}}`).
+
+Both `make release` and `make publish` run this command when publishing and strip surrounding whitespace from its output. They pass the result to `uv publish --password` without displaying it. A failed command stops publishing. For a PyPI API token, set `UV_PUBLISH_USERNAME=__token__`.
+
+If `PUBLISH_PASS_CMD` is unset or empty, `uv publish` uses its usual authentication behavior. You can set credentials with `UV_PUBLISH_TOKEN`, or with `UV_PUBLISH_USERNAME` and `UV_PUBLISH_PASSWORD`. See the [uv publishing documentation](https://docs.astral.sh/uv/guides/package/#publishing-your-package) for other authentication options.
 
 ## Documentation
 
